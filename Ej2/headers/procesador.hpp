@@ -8,7 +8,7 @@
 
 //CLASE PROCESADOR FIGURA
 
-//los metodos son sttic para que no necesiten instanciar la clase
+//los metodos son staic para que no necesiten instanciar la clase
 
 //caso general --> en el caso que no sea una figura producira un error
 template <typename T>
