@@ -19,9 +19,9 @@ void SaveFlightData::deserializar(ifstream &in) {
 }
 
 void SaveFlightData::imprimir() const {
-    cout << "== Datos de la medicion de vuelo ==" << endl;
-    cout << "Posicion:" << endl;
+    cout << "\n== Datos de la medicion de vuelo ==" << endl;
+    cout << "Posicion----------" << endl;
     posicion.imprimir();
-    cout << "Presion:" << endl;
+    cout << "\nPresion----------" << endl;
     presion.imprimir();
 }
