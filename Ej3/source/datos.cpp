@@ -1,8 +1,5 @@
 #include "../headers/datos.hpp"
-
-//comstrunctp
-Datos::Datos(): matrizEnteros(2) {} //al menos existen dos filas en la matriz
-
+#include <iostream>
 
 //metodos
 void Datos::procesarVD() const{
@@ -29,34 +26,18 @@ void Datos::procesarVS() const{
     std::cout<<"]";
 }
 
-void Datos::procesarME() const{
+void Datos::procesarVE() const{
     //imprimo la matriz de enteros
     std::cout<<"[\n";
-    for(int i = 0; i < matrizEnteros.size(); i++){
-        std::cout<<"\t[";
-        for(int j = 0; j < matrizEnteros[i].size(); j++){
-            
-            if (j == 1){
-                std::cout<<matrizEnteros[i][j];
-            }else
-                std::cout<<matrizEnteros[i][j]<<",";
-        }
-        if (i == 1)
-            std::cout<<"]\n";
+    for(int i = 0; i < 4; i++){
+        if(i == 0 || i == 2)
+            std::cout<<"\t["<< vectorEnteros[i] <<", ";
         
-        else std::cout<<"],\n";
+        else if(i == 3)
+            std::cout<< vectorEnteros[i] <<"]\n";
+        else
+            std::cout<< vectorEnteros[i] <<"],\n";
+              
     }
     std::cout<<"\t]\n";
-}
-
-VD Datos::getVectorDouble() const{
-    return vectorDouble;
-}
-
-VS Datos::getVectorString() const{
-    return vectorString;
-}
-
-ME Datos::getMatrizEnteros() const{
-    return matrizEnteros;
 }

@@ -23,7 +23,7 @@ void CrearJSON::imprimirJSON() const {
 
     //matriz de enteros
     cout<<"  \"" << etiquetaME << "\":";
-    c1.procesarME();
+    c1.procesarVE();
     
     cout << "}" << endl;
 }
