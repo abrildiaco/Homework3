@@ -13,9 +13,15 @@
 //caso general --> en el caso que no sea una figura producira un error
 template <typename T>
 class ProcesadorFigura {
+    private:
+        T figura;
+    
     public:
+        //constructor
+        ProcesadorFigura(const T& figura_): figura(figura_) {}
+    
         //metodos
-        static double calcularArea(const T& figura){
+        double calcularArea(){
             throw std::invalid_argument("Tipo de figura no soportado");
             return 0;
         }
@@ -24,9 +30,14 @@ class ProcesadorFigura {
 //especializacion para el caso de un punto
 template <>
 class ProcesadorFigura<Punto> {
+    private:
+        Punto figura;
     public:
+        //constructor
+        ProcesadorFigura(const Punto& figura_);
+
         //metodos
-        static double calcularArea(const Punto& figura){
+        double calcularArea(){
             return 0; //El area de un punto es 0
         }
 };
@@ -34,9 +45,14 @@ class ProcesadorFigura<Punto> {
 //especializacion para el caso de un circulo
 template <>
 class ProcesadorFigura<Circulo> {
+    private:
+        Circulo figura;
     public:
+        //constructor
+        ProcesadorFigura(const Circulo& figura_);
+
         //metodos
-        static double calcularArea(const Circulo& figura){
+        double calcularArea(){
             return PI * figura.getR() * figura.getR();
         }
 };
@@ -44,9 +60,15 @@ class ProcesadorFigura<Circulo> {
 //especializacion para el caso de una elipse
 template <>
 class ProcesadorFigura<Elipse> {
+    private:
+        Elipse figura;
+
     public:
+        //constructor
+        ProcesadorFigura(const Elipse& figura_);
+
         //metodos
-        static double calcularArea(const Elipse& figura){
+        double calcularArea(){
             return PI * figura.getA() * figura.getB();
         }
 };
@@ -54,9 +76,15 @@ class ProcesadorFigura<Elipse> {
 //especializacion para el caso de un rectangulo
 template <>
 class ProcesadorFigura<Rectangulo> {
+    private:
+        Rectangulo figura;
+    
     public:
+        //constructor
+        ProcesadorFigura(const Rectangulo& figura_);
+
         //metodos
-        static double calcularArea(const Rectangulo& figura){
+        double calcularArea(){
             return figura.getAncho() * figura.getLargo();
         }
 };

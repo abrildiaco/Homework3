@@ -13,7 +13,7 @@ class Datos{
     private:
         VD vectorDouble;
         VS vectorString;
-        VE vectorEnteros;
+        VE ve<ctorEnteros;
     
     public:
 
