@@ -1,4 +1,4 @@
-#include "headers/procesador.hpp"
+#include "../headers/procesador.hpp"
 #include <iostream>
 #include <string>
 #include <stdexcept>
