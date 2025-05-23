@@ -19,18 +19,18 @@ A continuación, se dejan las intrucciones para compilar cada ejercicio
 
 ### -Ej1:
 
-g++ -std=c++20 main1.cpp source/flight_data.cpp source/mediciones.cpp source/posicion.cpp source/presion.cpp -o main1
+g++ -std=c++20 main1.cpp ../source/flight_data.cpp ../source/mediciones.cpp ../source/posicion.cpp ../source/presion.cpp -o main1
 
 ./main1
 
 ### -Ej2:
 
-g++ -std=c++20 main2.cpp source/figuras.cpp -o main2
+g++ -std=c++20 main2.cpp ../source/figuras.cpp -o main2
 
 ./main2
 
 ### -Ej3
 
-g++ -std=c++20 main3.cpp source/crearJSON.cpp source/datos.cpp -o main3
+g++ -std=c++20 main3.cpp ../source/crearJSON.cpp ../source/datos.cpp -o main3
 
 ./main3
