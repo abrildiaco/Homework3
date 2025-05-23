@@ -25,7 +25,7 @@ g++ -std=c++20 main1.cpp ../source/flight_data.cpp ../source/mediciones.cpp ../s
 
 ### -Ej2:
 
-g++ -std=c++20 main2.cpp ../source/figuras.cpp -o main2
+g++ -std=c++20 main2.cpp ../source/figuras.cpp ../source/procesador.cpp  -o main2
 
 ./main2
 
