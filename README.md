@@ -31,6 +31,5 @@ g++ -std=c++20 main2.cpp ../source/figuras.cpp ../source/procesador.cpp  -o main
 
 ### -Ej3
 
-g++ -std=c++20 main3.cpp ../source/crearJSON.cpp ../source/datos.cpp -o main3
-
+g++ -std=c++20 main3.cpp ../source/crearJSON.cpp -o main3
 ./main3
