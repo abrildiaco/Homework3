@@ -2,19 +2,21 @@
 #include <string>
 #include "datos.hpp"
 
-
 class CrearJSON{
     private:
-        Datos& c1; //referencia a la clase 1
-        std::string etiquetaVD;
-        std::string etiquetaVS;
-        std::string etiquetaME;
+    
+        std::vector<std::pair<std::string, std::string>> datos; //vector de pares para almacenar etiquetas y datos
 
     public:
         //constructor
-        CrearJSON(Datos& c1, std::string etiquetaVD_, std::string etiquetaVS_, std::string etiquetaME_); //incluyo las etiquetas
+        CrearJSON() = default;
 
         //metodos
+        template<typename T>
+        void agregarDato(const std::string& etiqueta, const Dato<T>& dato) {
+            datos.emplace_back(std::make_pair(etiqueta, dato.procesar()));
+        }
+
         void imprimirJSON() const;
 
         //destructor
